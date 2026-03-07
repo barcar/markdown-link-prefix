@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "markdown-link-prefix"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python-Markdown extension: expand prefixed link shorthand (e.g. youtube:VIDEO_ID, snkb:KB123, snci:sys_id) to full URLs"
 readme = "README.md"
 license = "MIT"
