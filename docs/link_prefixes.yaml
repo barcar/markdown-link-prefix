@@ -1,0 +1,6 @@
+# Example prefixes for the documentation site.
+# snkb = Knowledge Articles, snci = Catalog Items (override instance as needed)
+youtube: "https://www.youtube.com/watch?v={id}"
+snkb: "https://instance.service-now.com/kb_view.do?sysparm_article={id}"
+snci: "https://instance.service-now.com/sp?id=sc_cat_item&sys_id={id}"
+jira: "https://jira.example.com/browse/{id}"

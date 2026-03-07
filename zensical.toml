@@ -1,0 +1,39 @@
+# Zensical config for building the documentation
+# Run: zensical serve (or zensical build)
+
+[project]
+site_name = "Markdown Link Prefix"
+site_description = "Python-Markdown extension: expand prefixed link shorthand to full URLs"
+site_url = "https://github.com/barcar/markdown-link-prefix"
+repo_url = "https://github.com/barcar/markdown-link-prefix"
+docs_dir = "docs"
+site_dir = "site"
+nav = [
+    { "Home" = "index.md" },
+    { "Demo" = "demo.md" },
+    { "Getting started" = [
+        { "Installation" = "installation.md" },
+        { "Configuration" = "configuration.md" },
+    ]},
+    { "User guide" = [
+        { "Usage" = "usage.md" },
+    ]},
+    { "Troubleshooting" = "troubleshooting.md" },
+    { "Changelog" = "changelog.md" },
+    { "License" = "license.md" },
+]
+
+[project.theme]
+variant = "modern"
+
+# Markdown extensions: enable link_prefix and load prefixes from YAML (no code edits to change links)
+[project.markdown_extensions.link_prefix]
+prefixes_file = "docs/link_prefixes.yaml"
+project_root = "."
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.superfences]
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+[project.markdown_extensions.toc]
+permalink = true
