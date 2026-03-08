@@ -48,7 +48,7 @@ def test_snci_from_config():
     md = _md(prefixes=EXAMPLE_PREFIXES)
     text = "[Catalog item](snci:abc123def456)"
     html = md.convert(text)
-    assert "instance.service-now.com" in html and "sc_cat_item" in html and "sys_id=abc123def456" in html
+    assert 'href="https://instance.service-now.com/sp?id=sc_cat_item&amp;sys_id=abc123def456"' in html
 
 
 def test_link_with_title():
@@ -70,8 +70,7 @@ def test_override_from_file():
     md = _md(prefixes={"snkb": "https://mycompany.service-now.com/kb_view.do?sysparm_article={id}"})
     text = "[KB](snkb:KB999)"
     html = md.convert(text)
-    assert "mycompany.service-now.com" in html
-    assert "KB999" in html
+    assert 'href="https://mycompany.service-now.com/kb_view.do?sysparm_article=KB999"' in html
 
 
 def test_unknown_prefix_unchanged():
